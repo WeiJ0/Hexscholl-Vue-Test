@@ -31,7 +31,7 @@ let collect = {
             html += `
                 <tr>
                     <td>
-                        <a href="view.html?id=${id}">${name}</a>
+                        <a href="./view.html?id=${id}">${name}</a>
                     </td>
                     <td>${content.slice(0, 50)}</td>
                     <td>

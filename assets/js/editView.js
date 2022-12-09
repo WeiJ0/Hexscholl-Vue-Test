@@ -90,7 +90,7 @@ let view = {
         const { isSuccess, message, viewID } = res;
         if (isSuccess) {
             showSuccess(message).then(() => {
-                window.location.href = `/admin.html`;
+                window.location.href = `./admin.html`;
             })
         } else {
             showError(res.message);
@@ -98,9 +98,6 @@ let view = {
     }
 
 };
-
-
-
 
 const init = () => {
     checkStatus();

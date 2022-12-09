@@ -29,14 +29,14 @@ let views = {
             html += `
             <tr>
                 <td>
-                    <a href="/view.html?id=${id}" target="_blank">${name}</a>
+                    <a href="./view.html?id=${id}" target="_blank">${name}</a>
                 </td>
                 <td>${content.slice(0, 50)}</td>
                 <td>
                     <img src="${image}" class="w-100 img-fluid" alt="${name}" width="100">
                 </td>
                 <td>
-                    <a href="/editView.html?id=${id}" class="btn btn-primary">編輯</a>
+                    <a href="./editView.html?id=${id}" class="btn btn-primary">編輯</a>
                     <button class="delBtn btn btn-danger" data-id="${id}">刪除</button>
                 </td>
             </tr>
