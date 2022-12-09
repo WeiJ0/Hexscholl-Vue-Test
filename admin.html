@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理頁面</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="my-3">
+        <h1 class="text-center">管理頁面</h1>
+        <a href="/editView.html" class="btn btn-outline-primary">新增景點</a>
+        <span class="ms-3">你已新增<span id="spanCnt">0</span>筆資料</span>
+      </div>
+      <div class="table-responsive">
+        <table id="viewTable" class="table align-middle">
+          <thead>
+            <tr>
+              <th width="10%">景點名稱</th>
+              <th width="15%">景點介紹</th>
+              <th width="20%">景點圖片</th>
+              <th width="15%">操作</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script type="module" src="./assets/js/admin.js"></script>
+  </body>
+</html>

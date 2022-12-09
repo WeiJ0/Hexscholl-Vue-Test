@@ -1,0 +1,21 @@
+{
+  "name": "hexschool-vue-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.1.3",
+    "axios": "^1.2.1",
+    "bootstrap": "^5.2.3",
+    "crypto-js": "^4.1.1",
+    "sweetalert2": "^11.6.15"
+  }
+}

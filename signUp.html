@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>註冊頁面</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="signUpForm" class="my-5 w-50 mx-auto">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="nickname"
+            required
+          />
+          <label for="floatingInput">暱稱</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="name@example.com"
+            value="demo@user.com.tw"
+            required
+          />
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+            required
+            value="123123"
+          />
+          <label for="floatingPassword">密碼</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            name="passwordConfirm"
+            placeholder="Password"
+            value=""
+            required
+          />
+          <label for="floatingPassword">再次輸入密碼</label>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-lg btn-primary mt-3">
+            送出
+          </button>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="./assets/js/signUp.js"></script>
+  </body>
+</html>
