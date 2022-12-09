@@ -1,9 +1,9 @@
 function T0(s,t){for(var e=0;e<t.length;e++){const r=t[e];if(typeof r!="string"&&!Array.isArray(r)){for(const n in r)if(n!=="default"&&!(n in s)){const i=Object.getOwnPropertyDescriptor(r,n);i&&Object.defineProperty(s,n,i.get?i:{enumerable:!0,get:()=>r[n]})}}}return Object.freeze(Object.defineProperty(s,Symbol.toStringTag,{value:"Module"}))}(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))r(n);new MutationObserver(n=>{for(const i of n)if(i.type==="childList")for(const c of i.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&r(c)}).observe(document,{childList:!0,subtree:!0});function e(n){const i={};return n.integrity&&(i.integrity=n.integrity),n.referrerpolicy&&(i.referrerPolicy=n.referrerpolicy),n.crossorigin==="use-credentials"?i.credentials="include":n.crossorigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function r(n){if(n.ep)return;n.ep=!0;const i=e(n);fetch(n.href,i)}})();const A0=!!localStorage.getItem("userInfo"),hs=()=>A0?null:window.location.href="/index.html",de=()=>JSON.parse(localStorage.getItem("userInfo")),R0=()=>{localStorage.removeItem("userInfo"),window.location.href="/"},O0=window.localStorage.getItem("userInfo")?JSON.parse(window.localStorage.getItem("userInfo")):null,ls=s=>{const t=document.createElement("header");let e="";s?e=`
         <li class="nav-item mx-3">
-            <a class="nav-link" href="/admin.html">前往後台</a>
+            <a class="nav-link" href="./admin.html">前往後台</a>
         </li>
         <li class="nav-item mx-3">
-            <a class="nav-link" href="/collect.html">收藏列表</a>
+            <a class="nav-link" href="./collect.html">收藏列表</a>
         </li>
         <li class="nav-item mx-3 d-flex align-items-center">
             <span class="mb-0 fw-bold h5"> Hello ! ${O0.nickname}</span>
@@ -13,15 +13,15 @@ function T0(s,t){for(var e=0;e<t.length;e++){const r=t[e];if(typeof r!="string"&
         </li>
         `:e=`
         <li class="nav-item mx-3">
-            <a id="btnLogin" class="nav-link" href="/signIn.html">登入</a>
+            <a id="btnLogin" class="nav-link" href="./signIn.html">登入</a>
         </li>
         <li class="nav-item mx-3">
-            <a class="btn btn-primary" href="/signUp.html" role="button">註冊</a>
+            <a class="btn btn-primary" href="./signUp.html" role="button">註冊</a>
         </li>
         `,t.innerHTML=`
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
-        <a class="navbar-brand" href="/index.html">景點介紹</a>
+        <a class="navbar-brand" href="./index.html">景點介紹</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

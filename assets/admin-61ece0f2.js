@@ -1,14 +1,14 @@
-import{c as r,i as l,g as h,d as m,a as f}from"./API-0e45865f.js";import{s as c,a as w,b as u}from"./Notify-628114b5.js";const g=!0;let b={info:[],getViews:async function(){let{isSuccess:i,message:e,views:t}=await h(g);i?(this.info=t,await this.render()):c(e)},render:function(){const i=document.querySelector("#spanCnt");i.textContent=this.info.length;const e=document.querySelector("#viewTable > tbody");let t="";this.info.forEach(d=>{const{id:s,name:n,content:a,image:o}=d;t+=`
+import{c as r,i as l,g as h,d as m,a as f}from"./API-e98952bd.js";import{s as c,a as w,b as u}from"./Notify-f5946d57.js";const g=!0;let b={info:[],getViews:async function(){let{isSuccess:i,message:e,views:t}=await h(g);i?(this.info=t,await this.render()):c(e)},render:function(){const i=document.querySelector("#spanCnt");i.textContent=this.info.length;const e=document.querySelector("#viewTable > tbody");let t="";this.info.forEach(d=>{const{id:s,name:n,content:a,image:o}=d;t+=`
             <tr>
                 <td>
-                    <a href="/view.html?id=${s}" target="_blank">${n}</a>
+                    <a href="./view.html?id=${s}" target="_blank">${n}</a>
                 </td>
                 <td>${a.slice(0,50)}</td>
                 <td>
                     <img src="${o}" class="w-100 img-fluid" alt="${n}" width="100">
                 </td>
                 <td>
-                    <a href="/editView.html?id=${s}" class="btn btn-primary">編輯</a>
+                    <a href="./editView.html?id=${s}" class="btn btn-primary">編輯</a>
                     <button class="delBtn btn btn-danger" data-id="${s}">刪除</button>
                 </td>
             </tr>
