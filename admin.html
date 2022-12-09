@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://weij0.github.io/Hexscholl-Vue-Test/vite.svg" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理頁面</title>
+    <script type="module" crossorigin src="https://weij0.github.io/Hexscholl-Vue-Test/assets/admin-902dec6c.js"></script>
+    <link rel="modulepreload" crossorigin href="https://weij0.github.io/Hexscholl-Vue-Test/assets/API-0e45865f.js">
+    <link rel="modulepreload" crossorigin href="https://weij0.github.io/Hexscholl-Vue-Test/assets/Notify-628114b5.js">
+    <link rel="stylesheet" href="https://weij0.github.io/Hexscholl-Vue-Test/assets/API-f81f53a3.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="my-3">
+        <h1 class="text-center">管理頁面</h1>
+        <a href="/editView.html" class="btn btn-outline-primary">新增景點</a>
+        <span class="ms-3">你已新增<span id="spanCnt">0</span>筆資料</span>
+      </div>
+      <div class="table-responsive">
+        <table id="viewTable" class="table align-middle">
+          <thead>
+            <tr>
+              <th width="10%">景點名稱</th>
+              <th width="15%">景點介紹</th>
+              <th width="20%">景點圖片</th>
+              <th width="15%">操作</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    
+  </body>
+</html>

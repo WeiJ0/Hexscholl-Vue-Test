@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://weij0.github.io/Hexscholl-Vue-Test/vite.svg" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>景點編輯</title>
+    <script type="module" crossorigin src="https://weij0.github.io/Hexscholl-Vue-Test/assets/editView-2d200856.js"></script>
+    <link rel="modulepreload" crossorigin href="https://weij0.github.io/Hexscholl-Vue-Test/assets/API-0e45865f.js">
+    <link rel="modulepreload" crossorigin href="https://weij0.github.io/Hexscholl-Vue-Test/assets/Notify-628114b5.js">
+    <link rel="stylesheet" href="https://weij0.github.io/Hexscholl-Vue-Test/assets/API-f81f53a3.css">
+  </head>
+  <body>
+    <div class="container">
+      <form id="viewForm" class="my-5 w-50 mx-auto">
+        <div class="mb-3">
+          <label for="name">景點名稱</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="content">景點介紹</label>
+          <textarea
+            class="form-control"
+            name="content"
+            id="content"
+            rows="8"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="image">景點圖片</label>
+          <input
+            type="text"
+            class="form-control"
+            name="image"
+            id="image"
+            required
+          />
+        </div>
+        <div class="text-center">
+          <a id="btnFill" class="btn btn-outline-info">填入隨機資料</a>
+          <button type="submit" class="btn btn-primary">送出</button>
+        </div>
+      </form>
+    </div>
+    
+  </body>
+</html>
