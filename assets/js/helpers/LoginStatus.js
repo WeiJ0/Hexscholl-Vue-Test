@@ -6,5 +6,5 @@ export const getUserInfo = () => JSON.parse(localStorage.getItem('userInfo'));
 
 export const logout = () => {
     localStorage.removeItem('userInfo');
-    window.location.href = '/';
+    window.location.href = './index.html';
 }
