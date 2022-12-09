@@ -1,4 +1,4 @@
-import{i as d,c as r,k as h,h as m,a as u}from"./API-e98952bd.js";import{s as o,a as f,b as g}from"./Notify-f5946d57.js";let b={list:[],getList:async function(){h().then(e=>{console.log(e);const{isSuccess:s,message:t,collects:n}=e;if(!s){o(t);return}this.list=n,this.render()})},render:function(){const e=document.querySelector("#spanCnt");e.textContent=this.list.length;const s=document.querySelector("#collectTable > tbody");let t="";this.list.forEach(n=>{const{id:c,name:i,content:a,image:l}=n.Views;t+=`
+import{i as d,c as r,k as h,h as m,a as u}from"./API-c0c3fb45.js";import{s as o,a as f,b as g}from"./Notify-e041df0b.js";let b={list:[],getList:async function(){h().then(e=>{console.log(e);const{isSuccess:s,message:t,collects:n}=e;if(!s){o(t);return}this.list=n,this.render()})},render:function(){const e=document.querySelector("#spanCnt");e.textContent=this.list.length;const s=document.querySelector("#collectTable > tbody");let t="";this.list.forEach(n=>{const{id:c,name:i,content:a,image:l}=n.Views;t+=`
                 <tr>
                     <td>
                         <a href="./view.html?id=${c}">${i}</a>
