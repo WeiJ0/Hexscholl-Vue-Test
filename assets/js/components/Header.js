@@ -1,4 +1,6 @@
 import { logout } from "../helpers/LoginStatus";
+import "../../../node_modules/bootstrap/dist/js/bootstrap.min.js"
+
 
 const user = window.localStorage.getItem('userInfo') ? JSON.parse(window.localStorage.getItem('userInfo')) : null;
 
@@ -8,26 +10,26 @@ export const initHeader = (isLogin) => {
 
     if (isLogin) {
         headerItems = `
-        <li class="nav-item mx-3">
+        <li class="nav-item my-3 my-md-0 mx-3">
             <a class="nav-link" href="./admin.html">前往後台</a>
         </li>
-        <li class="nav-item mx-3">
+        <li class="nav-item my-3 my-md-0 mx-3">
             <a class="nav-link" href="./collect.html">收藏列表</a>
         </li>
-        <li class="nav-item mx-3 d-flex align-items-center">
+        <li class="nav-item my-3 my-md-0 mx-3 d-flex align-items-center">
             <span class="mb-0 fw-bold h5"> Hello ! ${user.nickname}</span>
         </li>
-        <li class="nav-item mx-3">
+        <li class="nav-item my-3 my-md-0 mx-3">
             <a id="btnLogout" class="btn btn-outline-danger">登出</a>
         </li>
         `;
 
     } else {
         headerItems = `
-        <li class="nav-item mx-3">
+        <li class="nav-item my-3 my-md-0 mx-3">
             <a id="btnLogin" class="nav-link" href="./signIn.html">登入</a>
         </li>
-        <li class="nav-item mx-3">
+        <li class="nav-item my-3 my-md-0 mx-3">
             <a class="btn btn-primary" href="./signUp.html" role="button">註冊</a>
         </li>
         `
