@@ -9,7 +9,6 @@ let view = {
         name: '',
         content: '',
         image: '',
-        isOwner: false,
     },
     getID: function () {
         let url = new URL(window.location.href);
@@ -36,12 +35,13 @@ let view = {
         }
     },
     render: function () {
-        const { name, content, image, isOwner, Collects } = this.info;
+        const { name, content, image, Collects } = this.info;
         document.title = name;
         document.querySelector('#viewName').textContent = name;
         document.querySelector('#viewContent').textContent = content;
         document.querySelector('#viewImage').src = image;
 
+        // 非登入不顯示收藏按鈕
         if (!isLogin) {
             document.querySelector('#btnCollect').style.display = 'none';
             return;

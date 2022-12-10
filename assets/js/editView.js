@@ -4,17 +4,16 @@ import { getView, updateView, addView } from './helpers/API.js';
 import { showError, showSuccess } from './helpers/Notify';
 import random from '../random.json';
 
-const isAdmin = true;
-
 let view = {
     id: '',
-    info: '',
+    info: {},
     getID: function () {
         let url = new URL(window.location.href);
         this.id = url.searchParams.get("id");
-
+        // 若有id，則為編輯，否則為新增
         if (this.id) {
             this.getInfo();
+            // 編輯隱藏填入隨機資料按鈕
             document.querySelector('#btnFill').style.display = 'none';
         }
     },
@@ -74,6 +73,7 @@ let view = {
             }
         });
 
+        // 從隨機 json 檔案中取得資料
         const btnFill = document.querySelector('#btnFill');
         btnFill.addEventListener('click', (e) => {
             e.preventDefault();
@@ -86,7 +86,7 @@ let view = {
             document.querySelector('#image').value = randomData.image;
         })
     },
-    callback: function (res) {
+    callback: function (res) {        
         const { isSuccess, message, viewID } = res;
         if (isSuccess) {
             showSuccess(message).then(() => {

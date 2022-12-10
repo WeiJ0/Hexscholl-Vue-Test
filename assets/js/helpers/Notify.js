@@ -6,7 +6,6 @@ export const showSuccess = (message) =>
         text: message,
     })
 
-
 export const showError = (message) =>
     Swal.fire({
         icon: 'error',

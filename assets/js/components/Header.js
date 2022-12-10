@@ -50,7 +50,8 @@ export const initHeader = (isLogin) => {
     `;
     document.body.prepend(header);
 
-    if(isLogin) {
+    // 需在header加入後才能綁定事件
+    if (isLogin) {
         const btnLogout = document.querySelector('#btnLogout');
         btnLogout.addEventListener('click', logout);
     }

@@ -1,11 +1,13 @@
-import { createClient } from '@supabase/supabase-js'
 import UUID from './UUID.js'
 import CryptoJS from 'crypto-js'
 import { getUserInfo } from './LoginStatus.js'
 
+import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = 'https://vrvybashmqzmnityvcky.supabase.co'
 const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
+
+// 加密使用
 const key = "WeiJ";
 
 export const signUp = async ({ nickname, email, password }) => {
@@ -39,6 +41,7 @@ export const signUp = async ({ nickname, email, password }) => {
         return { isSuccess: false, message: error1.message };
     }
 
+    // 不儲存 password
     user[0].password = '';
 
     return { isSuccess: true, message: '註冊成功', userInfo: user[0] };
@@ -61,6 +64,9 @@ export const signIn = async ({ email, password }) => {
         return { isSuccess: false, message: '帳號或密碼錯誤' };
     }
 
+    // 不儲存 password
+    user[0].password = '';
+
     return { isSuccess: true, message: '登入成功', userInfo: user[0] };
 }
 
@@ -69,6 +75,7 @@ export const getViews = async (isAdmin) => {
     let views, error;
 
     if (isAdmin) {
+        // 前後台共用，後台僅取得自己新增景點
         let userInfo = getUserInfo();
         let result = await supabase.from('Views').select('*').eq('userId', userInfo.id);
         views = result.data;
@@ -116,9 +123,7 @@ export const getView = async (id) => {
 
 export const addView = async (view) => {
     const { name, content, image } = view;
-
-    console.log(view);
-
+    
     const userInfo = getUserInfo();
     const viewID = UUID();
 
@@ -167,6 +172,7 @@ export const deleteView = async (id) => {
 }
 
 export const collectView = async (id) => {
+    // 檢查是否已收藏
     let userInfo = getUserInfo();
     let isCollected = false;
     let { data: result, error } = await supabase.from('Collects').select('*').eq('userId', userInfo.id).eq('viewId', id);
