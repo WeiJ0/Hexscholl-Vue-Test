@@ -29,7 +29,7 @@ let views = {
                                     <img src="${image}" class="card-img-top" style="height: 200px; max-width: 100%" alt="${name}">
                                     <div class="card-body">
                                         <h4 class="text-center card-title h5">${name}</h4>
-                                        <p class="card-text">${content.slice(0, 50)}}</p>
+                                        <p class="card-text">${content.slice(0, 50)}</p>
                                     </div>
                                 </a>
                             </div>
